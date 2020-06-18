@@ -56,28 +56,19 @@ class Triangle implements TriangleInterface
 
     protected function checkPoints(): bool
     {
-        print_r([($this->PointA === null) ]);
-        print_r($this->pointA);
-        // print_r($this->pointC);
-        return ($this->PointA !== null) &&
-            ($this->PointB !== null) &&
-            ($this->PointC !== null);
-        // if (
-        //     ($this->PointA !== null) &&
-        //     ($this->PointB !== null) &&
-        //     ($this->PointC !== null)
-        // ) {
-        //     return true;
-        // } else {
-        //     echo 123;
-        //     return false;
-        // }
+        if (
+            isset($this->PointA) &&
+            isset($this->PointB) &&
+            isset($this->PointC)
+        ) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public function getPerimeter(): float
     {
-        echo $this->checkPoints();
-
         if ($this->checkPoints()) {
             return ($this->getAB()) + ($this->getBC()) + ($this->getAC());
         } else {
@@ -88,7 +79,6 @@ class Triangle implements TriangleInterface
 
     private function getHalfPerimeter(): float
     {
-
         return $this->getPerimeter() / 2;
     }
 

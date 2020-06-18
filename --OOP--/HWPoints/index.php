@@ -3,10 +3,13 @@
 include 'src/autoload.php';
 
 use Point\Point;
-//use Point\Line;
-//use Point\Square;
+use Point\Line;
+use Point\Rectangle;
+use Point\Square;
 use Point\Triangle;
 use Point\RightTriangle;
+use Point\TDRectangle;
+use Point\Cube;
 
 // $startPoint = new Point();
 // $endPoint = new Point();
@@ -40,43 +43,62 @@ use Point\RightTriangle;
 
 //echo $square->getPerimeter();
 
-$pointA  = new Point();
-$pointB  = new Point();
-$pointC  = new Point();
+// $pointA  = new Point();
+// $pointB  = new Point();
+// $pointC  = new Point();
 
-$pointA->setX(0)
-    ->setY(0);
+// $pointA->setX(10)
+//     ->setY(10);
 
-$pointB->setX(0)
-    ->setY(3);
+// $pointB->setX(10)
+//     ->setY(20);
 
-$pointC->setX(3)
-    ->setY(0);
+// $pointC->setX(20)
+//     ->setY(10);
 
-$triangle = new Triangle();
+// $triangle = new Triangle();
 
-$triangle
-    ->setPointA($pointA)
-    ->setPointB($pointB)
-    ->setPointC($pointC);
-
-// echo $triangle->getArea();
-
-// echo "<br>";
-
-echo $triangle->getPerimeter();
-// echo "<br>";
-
-// $rightTriangle = new RightTriangle();
-
-// $rightTriangle
+// $triangle
 //     ->setPointA($pointA)
 //     ->setPointB($pointB)
 //     ->setPointC($pointC);
 
-// echo $rightTriangle->getArea();
+// // echo $triangle->getArea();
 
-// echo "<br>";
+// // echo "<br>";
 
-// echo $rightTriangle->getPerimeter();
-// echo "<br>";
+// echo $triangle->getPerimeter();
+// // echo "<br>";
+
+// // $rightTriangle = new RightTriangle();
+
+// // $rightTriangle
+// //     ->setPointA($pointA)
+// //     ->setPointB($pointB)
+// //     ->setPointC($pointC);
+
+// // echo $rightTriangle->getArea();
+
+// // echo "<br>";
+
+// // echo $rightTriangle->getPerimeter();
+// // echo "<br>";
+
+$TDRectangle = new TDRectangle();
+
+$TDRectangle
+    ->setLength(10)
+    ->setWidth(5)
+    ->setHeight(15);
+    
+echo "Площадь поверхности = " . $TDRectangle->getArea();
+
+echo "<br>";
+
+echo "Объем = " . $TDRectangle->getVolume();
+
+echo "<br>";
+
+$cube = new Cube();
+
+echo $cube->checkCube();

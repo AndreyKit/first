@@ -7,14 +7,15 @@ class Cube extends TDRectangle
 
     public function checkCube()
     {
-        $result = "";
         if (
-            $this->getLength() == $this->getHeight() &&
-            $this->getLength() == $this->getWidth()
+            $this->length === $this->height &&
+            $this->length === $this->width
         ) {
-            return $result .= "Это куб";
+            $result = "Это куб $this->length $this->height $this->width";
         } else {
-            return $result .= "Это не куб";
+            $result = "Это не куб $this->length $this->height $this->width";
+
         }
+        return $result;
     }
 }

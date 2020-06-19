@@ -101,4 +101,6 @@ echo "<br>";
 
 $cube = new Cube();
 
-echo $cube->checkCube();
+echo $cube->setLength(5)
+->setWidth(5)
+->setHeight(5)->checkCube();

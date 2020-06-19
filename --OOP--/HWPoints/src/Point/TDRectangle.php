@@ -8,7 +8,7 @@ class TDRectangle implements TDRectangleInterface
     protected $width;
     protected $height;
 
-    public function setLength(float $length): self
+    public function setLength(float $length)
     {
         $this->length = $length;
         return $this;
@@ -19,7 +19,7 @@ class TDRectangle implements TDRectangleInterface
         return $this->length;
     }
 
-    public function setWidth(float $width): self
+    public function setWidth(float $width)
     {
         $this->width = $width;
         return $this;
@@ -30,7 +30,7 @@ class TDRectangle implements TDRectangleInterface
         return $this->width;
     }
 
-    public function setHeight(float $height): self
+    public function setHeight(float $height)
     {
         $this->height = $height;
         return $this;
@@ -43,9 +43,9 @@ class TDRectangle implements TDRectangleInterface
 
     public function getArea(): float
     {
-        $area = ($this->getLength() * $this->getWidth()) +
+        $area = (($this->getLength() * $this->getWidth()) +
             ($this->getLength() * $this->getHeight()) +
-            ($this->getHeight() * $this->getWidth());
+            ($this->getHeight() * $this->getWidth())) * 2;
         return  $area;
     }
 
